@@ -1,0 +1,585 @@
+/*Import global modules parts*/
+@import 'modules/global.scss';
+@import 'modules/mixins&extend.scss';
+@import 'modules/variables.scss';
+
+/*Import specific partial parts*/
+@import 'partials/top-bar.scss';
+@import 'partials/header.scss';
+@import 'partials/about.scss';
+@import 'partials/mission.scss';
+@import 'partials/about.scss';
+@import 'partials/gallery-str.scss';
+@import 'partials/offer.scss';
+@import 'partials/contact.scss';
+@import 'partials/footer.scss';
+
+
+/*Font Import*/
+
+
+/*Main SCSS*/
+html {
+  font-size: 16px;
+}
+
+body {
+  background: linear-gradient(-85deg, #f3ddc3 0, #f3ddc3 30%, #caf2f1 90%);
+  overflow: auto;
+}
+
+h1,
+h2,
+h5 {
+  font-family: $font-headline;
+}
+
+h3 {
+  font-family: "sofia-pro";
+}
+
+.box-shadow {
+  -webkit-box-shadow: 10px 10px 21px 0px rgba(134, 133, 125, 1);
+  -moz-box-shadow: 10px 10px 21px 0px rgba(134, 133, 125, 1);
+  box-shadow: 10px 10px 21px 0px rgba(134, 133, 125, 1);
+}
+.animated {
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media all and (max-width: 1690px) {
+  .about {
+    padding: 200px;
+    grid-gap: 60px;
+
+    .about__logo-info p,
+    .about__logo-sansara-info p {
+      @include basic-text(1.25em, 35px, 2px);
+    }
+  }
+
+  .gallery-str>.gallery-str__container {
+    .gallery-str__container__headline {
+      padding: 50px 150px;
+    }
+
+    .gallery-str__container__grid {
+      grid-gap: 15px;
+      padding: 0 150px;
+    }
+  }
+
+  .contact {
+    padding: 50px 0;
+
+    .contact__container {
+      .contact__container__box-2 {
+        margin-right: 0;
+      }
+    }
+  }
+  
+
+}
+
+
+@media all and (max-width: 1280px) {
+  .about {
+    padding: 80px;
+    grid-gap: 20px;
+
+    .about__logo-info p,
+    .about__logo-sansara-info p {
+      @include basic-text(1em, 35px, 1.5px);
+    }
+  }
+
+  .mission>.mission__container {
+    margin: 50px;
+
+  }
+
+  .gallery-str>.gallery-str__container {
+    .gallery-str__container__headline {
+      padding: 50px 100px;
+    }
+
+    .gallery-str__container__grid {
+      padding: 0 80px;
+      .grid-item-2-img {
+        height: 200px;
+        background-size: contain;
+      }
+      .grid-item-5-img {
+        height: 270px;
+        background-size: contain;
+      }
+    }
+  }
+
+  .offer {
+    padding: 50px;
+  }
+
+  .contact {
+    padding: 50px 0;
+
+    .contact__container>.contact__container__box-2 {
+      margin-right: 0;
+    }
+  }
+
+  footer {
+    @include basic-text(1em, null, null);
+    .open-box {
+      height: 350px;
+      width: 100%;
+      background-size: contain;
+      top: -220%;
+    }
+    .footer__container {
+      .footer__container__element>.footer__container__element__icons {
+        li {
+          display: inline;
+        }
+
+        li:first-child {
+          margin-left: 20px;
+        }
+
+        li:last-child {
+          margin-left: 5px;
+        }
+      }
+
+      .footer__container__element-list-nav ul {
+        li {
+          padding: 0 15px;
+
+        }
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: 980px) {
+  header {
+    .header__container {
+      .back-ball-2 {
+        left: 20%;
+      }
+
+      h5 {
+        margin-top: 20px;
+        margin-bottom: 60px;
+      }
+
+      h1 {
+        margin-bottom: 60px;
+      }
+    }
+
+    .header__box {
+      height: 469px;
+      width: 336px;
+      margin-left: -168px;
+      top: 50%;
+    }
+
+    .header__box-shadow {
+      height: 161px;
+      width: 362px;
+      margin-left: -131px;
+      top: 68%;
+    }
+  }
+
+  .about {
+    padding: 50px;
+    grid-gap: 10px;
+
+    .about__logo-info p,
+    .about__logo-sansara-info p {
+      @include basic-text(1em, 25px, 1.5px);
+    }
+
+    .number {
+      margin-left: 110px;
+    }
+  }
+
+  .mission>.mission__container {
+    margin: 30px;
+
+  }
+
+  .offer {
+    padding: 30px;
+
+    .offer__container {
+      display: block;
+
+      .box-realization,
+      .box-offer {
+        opacity: 1;
+      }
+
+      .box-realization {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .gallery-str>.gallery-str__container {
+    padding: 50px 0;
+
+    .gallery-str__container__headline {
+      padding: 50px 100px;
+
+      p {
+        padding: 0;
+      }
+    }
+
+    .gallery-str__container__grid {
+      grid-template-columns: repeat(2, 1fr);
+      align-self: center;
+      grid-gap: 20px;
+
+      [class*="grid-item-"] {
+        grid-column: auto;
+        grid-row: auto;
+        margin: 0;
+        align-self: center;
+      }
+
+      .grid-item-2-img,
+      .grid-item-4-img,
+      .grid-item-6-img {
+        justify-self: flex-end;;
+      }
+    }
+  }
+
+  .contact {
+    padding: 25px 0;
+
+    .contact__container {
+      .contact__container__box-1 {
+        padding: 25px 50px;
+      }
+
+      .contact__container__box-2 {
+        padding: 25px 50px;
+      }
+    }
+  }
+
+  footer {
+    @include basic-text(1em, null, null);
+    .open-box {
+        height: 300px;
+        background-size: contain;
+        top: -200%;
+    }
+    .footer__container {
+      .footer__container__element>.footer__container__element__icons {
+        li {
+          display: inline;
+        }
+
+        li:first-child {
+          margin-left: 5px;
+        }
+
+        li:last-child {
+          margin-left: 5px;
+        }
+      }
+
+      .footer__container__element-list-nav ul {
+        li {
+          padding: 0 10px;
+
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 736px) {
+  .about {
+    padding: 30px;
+
+    .about__logo-info p,
+    .about__logo-sansara-info p {
+      @include basic-text(0.75em, 20px, 1.5px);
+    }
+  }
+
+  .mission>.mission__container {
+    margin: 30px;
+  }
+
+  .gallery-str>.gallery-str__container {
+    .gallery-str__container__headline {
+      padding: 50px;
+    }
+
+    .gallery-str__container__grid {
+      padding: 0 20px;
+
+      [class*="grid-item-"] {
+        margin: 0;
+      }
+
+      .grid-item-5-img,
+      .grid-item-1-img {
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+      }
+
+    }
+  }
+
+  .contact {
+    .contact__container {
+      display: block;
+      padding: 25px 50px;
+
+      .contact__container__box-2 {
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  footer {
+    .open-box {
+        height: 290px;
+        background-size: contain;
+        top: -70%;
+    }
+    .footer__container {
+      padding: 10px 0 20px 0;
+      display: block;
+      padding: 0;
+
+      .footer__container__element {
+        padding: 0 20px;
+
+        .footer__container__element__icons {
+          li {
+            display: inline;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .footer__container__element-list-nav {
+        padding: 0 20px;
+
+        ul {
+          li {
+            width: 100%;
+            padding: 20px 0;
+
+            &:hover {
+              padding-bottom: 20px;
+              background-color: #fff2dd;
+              border-bottom: transparent;
+            }
+          }
+        }
+      }
+
+      a:last-child {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: 480px) {
+  .top-bar {
+    display: none;
+  }
+
+  header {
+    .header__container {
+
+      .back-ball-3 {
+        left: 5%;
+      }
+
+      h5 {
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+
+      h1 {
+        margin-bottom: 60px;
+      }
+
+      button {
+        display: none;
+      }
+
+      .fore-ball-4 {
+        left: 10%;
+        top: 20%;
+      }
+    }
+
+    .header__box {
+      height: 469px;
+      width: 336px;
+      margin-left: -168px;
+      top: 50%;
+    }
+
+    .header__box-shadow {
+      height: 161px;
+      width: 362px;
+      margin-left: -131px;
+      top: 68%;
+    }
+  }
+
+  .about {
+    margin-top: 100px;
+    padding: 30px;
+    display: block;
+
+    .about__logo-rise {
+      margin: 0 auto;
+    }
+
+    .number {
+      display: none;
+    }
+
+    .about__logo-sansara {
+      margin: 30px auto;
+    }
+
+    .about__logo-info p,
+    .about__logo-sansara-info p {
+      @include basic-text(0.75em, 20px, 1.5px);
+    }
+
+    .about__logo-sansara-info>.about__logo-sansara-info__crew {
+      h4 {
+        text-align: right;
+        font-size: 12px;
+        width: 100%;
+        align-self: center;
+      }
+    }
+  }
+
+  .mission>.mission__container {
+    margin: 50px;
+    flex-direction: column;
+
+    .mission__container__info {
+      padding: 0;
+      opacity: 0.7;
+      width: 100%;
+      text-align: center;
+      border: none;
+      border-bottom: 1px solid black;
+      padding-bottom: 20px;
+    }
+
+    .mission__container__heading {
+      margin-top: 20px;
+    }
+
+    .button {
+      margin-top: 20px;
+    }
+  }
+
+  .gallery-str>.gallery-str__container {
+    .gallery-str__container__grid {
+      grid-template-columns: 1fr;
+
+      [class*="grid-item-"] {
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+
+      .grid-item-1-img {
+        height: 100px;
+      }
+
+      .grid-item-4-img {
+        height: 100px;
+        width: 180px;
+      }
+
+      .grid-item-3-img {
+        width: 150px;
+        height: 150px;
+      }
+
+      .grid-item-5-img {
+        height: 180px;
+      }
+
+      .grid-item-6-img {
+        height: 150px;
+        ;
+      }
+
+    }
+  }
+
+  .offer {
+    padding: 15px;
+
+    .offer__container {
+
+      .box-realization,
+      .box-offer {
+        padding: 40px 20px;
+      }
+    }
+  }
+
+  .contact>.contact__container>.contact__container__box-2 {
+    padding: 0;
+  }
+
+  footer {
+    .open-box {
+      height: 160px;
+      background-size: contain;
+      top: -20%;
+    }
+    .footer__container {
+      .footer__container__element-list-nav {
+        padding: 0;
+        height: auto;
+        width: 100%;
+
+        ul {
+          display: block;
+        }
+      }
+    }
+  }
+}

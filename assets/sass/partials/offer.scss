@@ -1,0 +1,108 @@
+.offer {
+  padding: 100px 220px;
+  position: relative;
+  .offer__container {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px 1fr 100px;
+    grid-template-rows: 100px 1fr 100px 1fr 100px;
+    .box-realization,
+    .box-offer {
+      padding: 80px 100px;
+      text-align: center;
+      @include upper;
+
+      h1 {
+        @include basic-text(3em, null, 4.8px);
+        @include uppercase-bolder(800);
+        display: inline-block; ///
+        margin-bottom: 45px;
+      }
+      h5 {
+        @include basic-text(1em, 24px, 1.6px);
+        margin-bottom: 31px;
+      }
+
+      button {
+        @include button($button-grey, $white);
+
+        &:hover {
+          @include hover-button;
+        }
+      }
+    }
+
+    .box-realization {
+      grid-column: 2 / span 2;
+      grid-row: 2/ span 2;
+      background-color: $light-brown;
+      opacity: 0.62;
+      @include basic-transition;
+      &:hover {
+        opacity: 1;
+        z-index: 5;
+      }
+      .box-realization-heading {
+        position: relative;
+      }
+      .number {
+        @include number;
+      }
+    }
+
+    .box-offer {
+      color: $white;
+      background-color: $medium-grey;
+      grid-column: 3 / span 2;
+      grid-row: 3/ span 2;
+      opacity: 0.62;
+      @include basic-transition;
+      &:hover {
+        opacity: 1;
+        z-index: 5;
+      }
+      .box-realization-heading {
+        position: relative;
+      }
+      .number {
+        @include number;
+        color: $button-grey;
+      }   
+      button {
+        @include button($button-blue, $text-heading-color);
+
+      }
+    }
+  }
+  .offer-fore-ball-1 {
+    background-image: url('assets/images/offer-fore-ball-1.png');
+    height: 36px;
+    width: 36px;
+    @include back-balls;
+    top: 70%;
+    left: 5%;
+  }
+  .offer-fore-ball-2 {
+    background-image: url('assets/images/offer-fore-ball-2.png');
+    height: 49px;
+    width: 50px;
+    @include back-balls;
+    top: 85%;
+    left: 80%;
+  }
+  .offer-fore-ball-3 {
+    background-image: url('assets/images/offer-fore-ball-3.png');
+    height: 19px;
+    width: 19px;
+    @include back-balls;
+    top: 79%;
+    right: 10%;
+  }
+  .offer-back-ball-1 {
+    background-image: url('assets/images/offer-back-ball-3.png');
+    height: 87px;
+    width: 101px;
+    @include back-balls;
+    top: 90%;
+    left: 22%;
+  }
+}

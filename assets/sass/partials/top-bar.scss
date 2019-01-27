@@ -1,0 +1,28 @@
+@import '../modules/variables';
+@import '../modules/mixins&extend';
+
+.top-bar {
+  padding: 10px 50px;
+
+  ul {
+    @include flex(row, space-between, center);
+    align-self: center;
+
+    li>ul:first-child {
+      height: 100%;
+
+      li {
+        align-self: center;
+
+        a {
+          @include basic-text(1.125em, null, 1.8px);
+          font-family: $font-headline;
+        }
+      }
+
+      li:last-child {
+        margin-left: 15px;
+      }
+    }
+  }
+}

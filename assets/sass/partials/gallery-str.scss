@@ -1,0 +1,287 @@
+.gallery-str {
+  .gallery-str__container {
+    position: relative;
+    .gallery-str__container__headline {
+      text-align: center;
+      padding: 50px 350px;
+
+      h2 {
+        @include basic-text(3.75em, null, 28.8px);
+        @include uppercase-bolder(800);
+        color: $text-heading-color;
+        display: inline;
+        position: relative;
+      }
+
+      .number {
+        @include number;
+      }
+
+      p {
+        @include basic-text(1em, 24px, 1.6px);
+        @include uppercase-bolder(400);
+        color: $text-main-color;
+        font-family: $font-base;
+        padding: 50px 200px;
+      }
+    }
+
+    .gallery-str__container__grid {
+      display: grid;
+      grid-gap: 30px;
+      padding: 0 200px;
+      grid-template-columns: minmax(300px, 1fr)  minmax(100px, 1fr) minmax(270px, 1fr) minmax(100px, 1fr);
+      [class*="grid-item-heading"] {
+        h3 {
+          @include basic-text(1.5em, null, 2.4px);
+          @include uppercase-bolder(800);
+          font-family: $font-headline;
+          color: $text-heading-color;
+        }
+        h3:after {
+          content: "";
+          display: block;
+          width: 10%;
+          margin-top: 5px;
+          border-bottom: 1px solid $text-heading-color;
+        }
+        p {
+          @include basic-text(0.875em, 20px, 0.07px);
+          color: $text-main-color;
+          font-family: $font-base;
+        }
+      }
+      [class*="grid-item-"] {
+        background-repeat: no-repeat;
+      }
+
+      .grid-item-1-img {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        background-image: url('/assets/images/grid-item-1.png');
+        width: 301px;
+        height: 186px;
+        justify-self: flex-end;
+        margin-top: -50px;
+      }
+      .grid-item-heading-1{
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+      }
+      .grid-item-2-img {
+        grid-column: 4 / span 1;
+        grid-row: 2 / span 1;
+        background-image: url('/assets/images/grid-item-2.png');
+        width: 206px;
+        height: 271px;
+        margin-top: -100px;
+      }
+      .grid-item-heading-2{
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+      }
+      .grid-item-3-img {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+        background-image: url('/assets/images/grid-item-3.png');
+        width: 111px;
+        height: 138px;
+        justify-self: end;
+      }
+      .grid-item-heading-3{
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+      }
+      .grid-item-4-img {
+        grid-column: 3 / span 1;
+        grid-row: 4 / span 1;
+        background-image: url('/assets/images/grid-item-4.png');
+        width: 229px;
+        height: 159px;
+        justify-self: end;
+      }
+      .grid-item-heading-4{
+        grid-column: 4 / span 1;
+        grid-row: 4 / span 1;
+      }
+      .grid-item-5-img {
+        grid-column: 1 / span 1;
+        grid-row: 5 / span 1;
+        background-image: url('/assets/images/grid-item-5.png');
+        width: 357px;
+        height: 318px;
+        margin-top: -50px;
+        justify-self:flex-end;
+      }
+      .grid-item-heading-5{
+        grid-column: 2 / span 1;
+        grid-row: 5 / span 1;
+      }
+      .grid-item-6-img {
+        grid-column: 3 / span 1;
+        grid-row: 6 / span 1;
+        background-image: url('/assets/images/grid-item-6.png');
+        width: 270px;
+        height: 207px;
+        justify-self: end;
+        margin-top: 50px;
+      }
+      .grid-item-heading-6{
+        grid-column: 4 / span 1;
+        grid-row: 6 / span 1;
+      }
+    }
+    .gallery-fore-ball-silver-1 {
+      background-image: url('assets/images/gallery-fore-ball-silver-1.png');
+      height: 20px;
+      width: 20px;
+      @include back-balls;
+      top: 19%;
+      left: 29%;
+      z-index: 5;
+    }
+    .gallery-fore-ball-silver-2 {
+      background-image: url('assets/images/gallery-fore-ball-silver-2.png');
+      height: 41px;
+      width: 50px;
+      @include back-balls;
+      top: 15%;
+      left: 80%;
+      z-index: 5;
+    }
+    .gallery-fore-ball-silver-3 {
+      background-image: url('assets/images/gallery-fore-ball-silver-3.png');
+      height: 35px;
+      width: 36px;
+      @include back-balls;
+      top: 37%;
+      left: 25%;
+      z-index: 5;
+    }
+    .gallery-fore-ball-silver-4 {
+      background-image: url('assets/images/gallery-fore-ball-silver-4.png');
+      height: 35px;
+      width: 36px;
+      @include back-balls;
+      top: 40%;
+      left: 80%;
+      z-index: 5;
+    }
+    .gallery-fore-ball-silver-5 {
+      background-image: url('assets/images/gallery-fore-ball-silver-5.png');
+      height: 20px;
+      width: 20px;
+      @include back-balls;
+      top: 45%;
+      left: 62%;
+    }
+    .gallery-fore-ball-silver-6 {
+      background-image: url('assets/images/gallery-fore-ball-silver-6.png');
+      height: 35px;
+      width: 35px;
+      @include back-balls;
+      top: 70%;
+      left: 20%;
+      z-index: 5;
+    }
+    .gallery-fore-ball-silver-7 {
+      background-image: url('assets/images/gallery-fore-ball-silver-7.png');
+      height: 20px;
+      width: 20px;
+      @include back-balls;
+      top: 80%;
+      left: 80%;
+      z-index: 5;
+    }
+    .gallery-medium-ball-1 {
+      background-image: url('assets/images/gallery-medium-ball-1.png');
+      height: 72px;
+      width: 84px;
+      @include back-balls;
+      top: 45%;
+      left: 15%;
+      z-index: -1;
+    }
+    .gallery-medium-ball-2 {
+      background-image: url('assets/images/gallery-medium-ball-2.png');
+      height: 154px;
+      width: 124px;
+      @include back-balls;
+      top: 65%;
+      right: 0;
+      z-index: -1;
+    }
+    .gallery-medium-ball-3 {
+      background-image: url('assets/images/gallery-medium-ball-3.png');
+      height: 45px;
+      width: 47px;
+      @include back-balls;
+      top: 75%;
+      left: 80%;
+      z-index: -1;
+    }
+    .gallery-medium-ball-4 {
+      background-image: url('assets/images/gallery-medium-ball-4.png');
+      height: 112px;
+      width: 116px;
+      @include back-balls;
+      top: 85%;
+      left: 25%;
+      z-index: -1;
+    }
+    .gallery-medium-ball-5 {
+      background-image: url('assets/images/gallery-medium-ball-5.png');
+      height: 30px;
+      width: 30px;
+      @include back-balls;
+      top: 65%;
+      left: 10%;
+      z-index: -1;
+    }
+    .gallery-back-ball-1 {
+      background-image: url('assets/images/gallery-back-ball-1.png');
+      height: 133px;
+      width: 135px;
+      @include back-balls;
+      top: 10%;
+      left: 80%;
+      z-index: -2;
+    }
+    .gallery-back-ball-2 {
+      background-image: url('assets/images/gallery-back-ball-2.png');
+      height: 30px;
+      width: 30px;
+      @include back-balls;
+      top: 50%;
+      left: 10%;
+      z-index: -2;
+    }
+    .gallery-back-ball-3 {
+      background-image: url('assets/images/gallery-back-ball-3.png');
+      height: 95px;
+      width: 96px;
+      @include back-balls;
+      top: 65%;
+      left: 75%;
+      z-index: -2;
+    }
+    .gallery-back-ball-4 {
+      background-image: url('assets/images/gallery-back-ball-4.png');
+      height: 96px;
+      width: 118px;
+      @include back-balls;
+      top: 80%;
+      left: 40%;
+      z-index: -2;
+    }
+    .gallery-back-ball-5 {
+      background-image: url('assets/images/gallery-back-ball-5.png');
+      height: 237px;
+      width: 254px;
+      @include back-balls;
+      top: 55%;
+      left: 0;
+      z-index: -2;
+    }
+  }
+}

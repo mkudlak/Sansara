@@ -1,0 +1,209 @@
+@import '../modules/variables';
+@import '../modules/mixins&extend';
+
+header {
+  height: auto;
+  text-align: center;
+  font-family: "ff-good-headline-web-pro-ext";
+  padding-bottom: 200px;
+  .header__container {
+    height: 100%;
+    
+    text-align: center;
+    position: relative;
+
+    .back-ball-1 {
+      background-image: url('assets/images/header-ball-1.png');
+      @include back-balls;
+      height: 76px;
+      width: 152px;
+      top: -31%;
+      left: 37%;
+    }
+    .back-ball-2 {
+      background-image: url('assets/images/header-ball-2.png');
+      @include back-balls;
+      height: 133px;
+      width: 164px;
+      top: -1%;
+      left: 39%;
+    }
+    .back-ball-3{
+      background-image: url('assets/images/header-ball-3.png');
+      @include back-balls;
+      height: 232px;
+      width: 246px;
+      top: 45%;
+      left: 0%;
+    }
+
+    h5 {
+      @include basic-text(1.5em, null, 2.4px);
+      @include uppercase-bolder(400);
+      color: $text-heading5-color;
+      opacity: 0.87;
+      margin-bottom: 50px;
+      
+    }
+
+    h1 {
+      @include uppercase-bolder(800);
+      @include basic-text(5em, null, 8px);
+      color: $text-heading-color;
+      margin-bottom: 10px;
+    }
+
+    button {
+      @include button(transparent, $white);
+      @include basic-text(1.5em, null, 2.4px);
+      margin: 0 auto;
+      margin-bottom: 200px;
+      z-index: 10;
+
+      &:hover {
+        @include hover-button;
+        color: white;
+      }
+    }
+
+    p {
+      @include uppercase-bolder(800);
+      @include basic-text(1.255em, null, 2px);
+    }
+    [class^="fore"], [class^="back"] {
+      transition: all 0.5s ease;
+    }
+    .fore-ball-1 {
+      background-image: url('assets/images/header-ball-4.png');
+      height: 30px;
+      width: 30px;
+      @include back-balls;
+      top: -20%;
+      left: 35%;
+    }
+    .fore-ball-2 {
+      background-image: url('assets/images/header-ball-5.png');
+      @include back-balls;
+      height: 67px;
+      width: 83px;
+      top: -10%;
+      left: 33%;
+    }
+    .fore-ball-3 {
+      background-image: url('assets/images/header-ball-6.png');
+      @include back-balls;
+      height: 30px;
+      width: 30px;
+      top: -5%;
+      left: 36%;
+    }
+    .fore-ball-4 {
+      background-image: url('assets/images/header-ball-7.png');
+      @include back-balls;
+      height: 59px;
+      width: 59px;
+      top: 18%;
+      left: 38%;
+      z-index: 5;
+    }
+    .fore-ball-5 {
+      background-image: url('assets/images/header-ball-8.png');
+      @include back-balls;
+      height: 73px;
+      width: 89px;
+      top: 33%;
+      left: 57%;
+      z-index: 5;
+    }
+    .fore-ball-6 {
+      background-image: url('assets/images/header-ball-9.png');
+      @include back-balls;
+      height: 30px;
+      width: 30px;
+      top: 25%;
+      left: 63%;
+      z-index: 5;
+    }
+    .fore-ball-7 {
+      background-image: url('assets/images/header-ball-10.png');
+      @include back-balls;
+      height: 61px;
+      width: 61px;
+      top: 54%;
+      left: 7%;
+      z-index: 5;
+    }
+    .fore-ball-silver-1 {
+      background-image: url('assets/images/header-ball-11.png');
+      @include back-balls;
+      height: 36px;
+      width: 36px;
+      top: 0%;
+      left: 37%;
+      z-index: 5;
+    }
+    .fore-ball-silver-2 {
+      background-image: url('assets/images/header-ball-12.png');
+      @include back-balls;
+      height: 72px;
+      width: 95px;
+      top: 12%;
+      left: 32%;
+      z-index: 5;
+    }
+    .fore-ball-silver-3 {
+      background-image: url('assets/images/header-ball-13.png');
+      @include back-balls;
+      height: 30px;
+      width: 30px;
+      top: 12%;
+      left: 40%;
+      z-index: 5;
+    }
+    .fore-ball-silver-4 {
+      background-image: url('assets/images/header-ball-14.png');
+      @include back-balls;
+      height: 74px;
+      width: 78px;
+      top: 59%;
+      left: 65%;
+      z-index: 5;
+    }
+    .fore-ball-silver-5 {
+      background-image: url('assets/images/header-ball-15.png');
+      @include back-balls;
+      height: 20px;
+      width: 20px;
+      top: 69%;
+      left: 43%;
+      z-index: 5;
+    }
+  }
+
+  .header__box {
+    @include absolute;
+    top: 18%;
+    left: 52%;
+    margin-left: -385px;
+    z-index: -1;
+    width: 769px;
+    height: 636px;
+    background-image: url('assets/images/header-box.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+  }
+
+  .header__box-shadow {
+    @include absolute;
+    top: 57%;
+    left: 48%;
+    margin-left: -266px;
+    z-index: -2;
+    height: 361px;
+    width: 562px;
+    background-image: url('assets/images/header-box-shadow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

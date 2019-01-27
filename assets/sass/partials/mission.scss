@@ -1,0 +1,84 @@
+.mission {
+  display: block;
+  position: relative;
+  .mission__container {
+    @include bg-c($light-brown, $text-articles-paragraph-color);
+    margin: 100px 250px;
+    padding: 40px 30px;
+    ;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+
+    .mission__container__info {
+      width: 50%;
+      @include basic-text(1em, 20px, 1px);
+      padding-right: 20px;
+      text-align: right;
+      border-right: 1px solid black;
+      color: $text-articles-paragraph-color;
+      opacity: 0.49;
+      font-family: $font-base;
+
+      .mission-info-second {
+        display: none;
+      }
+    }
+
+    .mission__container__heading {
+      align-self: center;
+
+      h1 {
+        @include basic-text(1.5em, null, 4px);
+        @include uppercase-bolder(800);
+        font-family: $font-headline;
+        color: $text-heading-color;
+      }
+
+      .mission-heading-first,
+      .mission-heading-second {
+
+        font-size: 1.5em;
+      }
+
+      .active {
+        font-size: 2.5em;
+      }
+    }
+
+    .button {
+      align-self: center;
+
+      button {
+        @include button($button-grey, $white);
+        height: 40px;
+        width: 40px;
+        padding: 0;
+        border-radius: 50%;
+        padding-left: 5px;
+
+        &:hover {
+          @include hover-button;
+        }
+      }
+
+    }
+  }
+  .mission-fore-ball-silver-1 {
+    background-image: url('assets/images/mission-fore-ball-silver-1.png');
+    height: 60px;
+    width: 50px;
+    @include back-balls;
+    top: 40%;
+    left: 72%;
+    z-index: 3;
+  }
+  .mission-back-ball-1 {
+    background-image: url('assets/images/mission-back-ball-1.png');
+    height: 315px;
+    width: 252px;
+    @include back-balls;
+    top: -15%;
+    left: 0;
+  }
+}
